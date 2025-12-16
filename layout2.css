@@ -1,0 +1,574 @@
+/* ================= RESET ================= */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+/* ================= BODY ================= */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ================= HEADER ================= */
+header {
+  background-color: #2D5A88;
+  padding: 15px 25px;
+  margin-bottom: 0;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.home-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 7px 15px;
+  border-radius: 18px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #61cdf4;
+  transition: 0.25s;
+}
+
+.home-btn:hover {
+  background: #61cdf4;
+  color: #fff;
+}
+
+/* ================= TOP BAR ================= */
+.topbar {
+  background: #0077b6;
+  color: white;
+  padding: 15px 30px;
+}
+
+/* ================= LAYOUT ================= */
+.layout-container {
+  display: flex;
+  min-height: calc(100vh - 120px);
+}
+
+/* ================= ABOUT ================= */
+.about-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-aside {
+  position: sticky;
+  top: 30px;
+  align-self: flex-start;
+}
+
+/* ================= EXPERIENCE ================= */
+.experience-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0;
+  padding: 20px;
+}
+
+.experience-articles h2 {
+    margin-top: 0;
+    margin-bottom: 0; /* boleh adjust */
+}
+
+.experience-articles {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.experience-aside {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 240px;
+  background: #50ABE7;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  color: #D0E1F9;
+  margin-bottom: 25px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.sidebar ul li a:hover {
+  background: #87CEEB;
+  color:#2D5A88;
+}
+
+/* ================= CONTENT ================= */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* ================= PROFILE ================= */
+.profile-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.profile-img {
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.profile-card h2 {
+  font-size: 1.8rem;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  line-height: 1.8;
+  color: #555;
+}
+
+/* ================= EDUCATION ================= */
+.edu-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.grid {
+  background: #F0FFFF;
+  padding: 25px 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.year {
+  display: inline-block;
+  background: #61cdf4;
+  color: white;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.grid img {
+  width: 150px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 20%;
+  border: 2px solid #61cdf4;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.1);
+}
+
+.grid h3 {
+  color: #61cdf4;
+  margin-bottom: 5px;
+}
+
+.grid p {
+  color: #555;
+  font-size: 0.9rem;
+}
+/* ================= FAMILY ================= */
+.family-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.row2 {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.family-container .card {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.family-container .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.family-container .card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #61cdf4;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.family-container .card img:hover {
+  transform: scale(1.1);
+}
+
+.family-container .card .role {
+  font-weight: bold;
+  color: #61cdf4;
+  margin-bottom: 5px;
+}
+
+.family-container .card .name {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+
+/* ================= FUN FACT ================= */
+.fun-fact-list {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.fun-fact-list h3 {
+  text-align: center;
+  color: #0D47A1;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.fun-fact-list ul {
+  list-style: disc;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fun-fact-list li.fun-fact-card {
+  background: #BAE0F3;
+  padding: 25px;
+  border-radius: 18px;
+  border-left: 5px solid #61CDF4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.fun-fact-list li.fun-fact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.fun-fact-images {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fun-fact-images img,
+.fun-fact-list img {
+  width: 90px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.fun-fact-images img:hover,
+.fun-fact-list img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= MARQUEE ================= */
+.homepage-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  background: #e3f2fd;
+  border-radius: 12px;
+  padding: 12px 0;
+  margin: 30px auto;
+  max-width: 90%;
+}
+
+.homepage-marquee p {
+  display: inline-block;
+  padding-left: 10%;
+  font-weight: 500;
+  color: #0077b6;
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
+}
+
+/* ================= GALLERY ================= */
+body.gallery-page {
+  background-image: url('kotak kotak.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.gallery-free {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.gallery-free img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-free img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* ================= SECTION ================= */
+section {
+  flex: 1;
+  display: block;
+  padding: 40px;
+
+  /* background image + lembut supaya text jelas */
+  background-image:url("cloud.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ================= ARTICLE ================= */
+article {
+  background: lavender;
+  padding: 15px;
+  max-width: 700px;
+  width: 100%;
+  margin: 30px auto 10px;
+  border-radius: 15px;
+}
+
+article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+h2 {
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+
+/* ================= TABLE ================= */
+.info-table {
+  width: 100%;
+  border-collapse: collapse; /* bagi border cantik & rapat */
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.info-table th,
+.info-table td {
+  border: 2px solid #2D5A88; /* border jelas */
+  padding: 12px 15px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.info-table th {
+  background-color: #A7C7E7; /* header biru lembut */
+  color: #0D47A1;
+  font-weight: 600;
+  text-align: center;
+}
+
+.info-table td {
+  background-color: #F5FBFF; /* isi lembut */
+  color: #333;
+}
+
+/* hover row (optional tapi cantik) */
+.info-table tr:hover td {
+  background-color: #E3F2FD;
+}
+
+
+/* ================= SPOTIFY ================= */
+.spotify-box {
+  display: flex;
+  justify-content: center;
+}
+
+.spotify-box iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 100px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* ================= SOCIAL ================= */
+.social-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.social-section h2 {
+  font-size: 1.8rem;
+  color: #0077b6;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0 auto;
+}
+
+.social-icons a {
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  background: #61cdf4;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  background: #0077b6;
+}
+
+@media (max-width: 600px) {
+  .social-icons a {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+/* ================= FOOTER ================= */
+footer {
+  background: #2D5A88;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
